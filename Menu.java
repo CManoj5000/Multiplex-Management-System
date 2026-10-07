@@ -1,8 +1,13 @@
 import java.util.Scanner;
 
 public class Menu {
+    CineData data;
+    Scanner sc;
+    Menu() {
+        data = new CineData();
+        sc = new Scanner(System.in);
+    }
     public void menu() {
-        Scanner sc = new Scanner(System.in);
         do {
             System.out.println("* * * * * CINEMAX BOOKING SYSTEM * * * * *");
             System.out.println("1. View Seat Map            5. Customers Per Show");
@@ -14,10 +19,10 @@ public class Menu {
             switch(ch) {
                 case 1 :
                     ViewSeatMap map = new ViewSeatMap();
-                    map.viewSeatMap();
+                    map.viewSeatMap(data);
                     break;
                 case 2 :
-                    BookingTicket book = new BookingTicket();
+                    BookingTicket book = new BookingTicket(sc);
                     book.bookingTicket();
                     break;
                 case 3 :

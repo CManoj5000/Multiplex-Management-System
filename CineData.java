@@ -13,7 +13,7 @@ public class CineData {
             for(int j = 0; j < seatMap[i].length; j++) {
                 char row = (char) ('A' + j);
                 for(int k = 0; k < seatMap[i][j].length; k++){
-                    int column = k + 1;
+                    int column = k;
                     seatMap[i][j][k] = row + "" + column;
                 }
             }

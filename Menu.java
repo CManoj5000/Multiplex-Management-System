@@ -23,27 +23,27 @@ public class Menu {
                     break;
                 case 2 :
                     BookingTicket book = new BookingTicket(sc);
-                    book.bookingTicket();
+                    book.bookingTicket(data);
                     break;
                 case 3 :
-                    CancelTicket cancel = new CancelTicket();
-                    cancel.cancelTicket();
+                    CancelTicket cancel = new CancelTicket(sc);
+                    cancel.cancelTicket(data);
                     break;
                 case 4 :
-                    AvailableSeats seats = new AvailableSeats();
-                    seats.availableSeats();
+                    AvailableSeats seats = new AvailableSeats(sc);
+                    seats.availableSeats(data);
                     break;
                 case 5 :
-                    CustomersPerShow customers = new CustomersPerShow();
-                    customers.customersPerShow();
+                    CustomersPerShow customers = new CustomersPerShow(sc);
+                    customers.customersPerShow(data);
                     break;
                 case 6 :
-                    SearchCustomer search = new SearchCustomer();
-                    search.searchCustomer();
+                    SearchCustomer search = new SearchCustomer(sc);
+                    search.searchCustomer(data);
                     break;
                 case 7 :
-                    WeaklySalesReport report = new WeaklySalesReport();
-                    report.weaklySalesReport();
+                    WeaklySalesReport report = new WeaklySalesReport(sc);
+                    report.weaklySalesReport(data);
                     break;
                 case 8 :
                     return;

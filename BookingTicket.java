@@ -22,6 +22,16 @@ public class BookingTicket {
         seatNo = sc.next();
         System.out.println("Booking Id : ");
         bookingId = sc.next();
-        
         }
+    public void bookingTicket(CineData data) {
+        String key = seatNo;
+        for(int i = 0; i < data.seatMap.length; i++) {
+            for(int j = 0; j < data.seatMap[i].length; j++) {
+                if(key ==  data.seatMap[screen][i][j])
+                    data.seatMap[screen][i][j] = "X";
+            }
+        }
+        
+    }
+
 }

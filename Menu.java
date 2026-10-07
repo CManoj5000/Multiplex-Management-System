@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Menu {
     CineData data;
     Scanner sc;
@@ -12,38 +11,38 @@ public class Menu {
             System.out.println("* * * * * CINEMAX BOOKING SYSTEM * * * * *");
             System.out.println("1. View Seat Map            5. Customers Per Show");
             System.out.println("2. Booking Tickets          6. Search Customer");
-            System.out.println("3. Cancel Ticket            7. Weakly Sales Report");
+            System.out.println("3. Cancel Ticket            7. Weekly Sales Report");
             System.out.println("4. Available Seats          8. Exit");
             System.out.println("Kindly Enter Your Choice : ");
             int ch = sc.nextInt();
             switch(ch) {
                 case 1 :
-                    ViewSeatMap map = new ViewSeatMap();
-                    map.viewSeatMap(data);
+                    ViewSeatMap map = new ViewSeatMap(sc);
+                    map.viewSeatMap();
                     break;
                 case 2 :
                     BookingTicket book = new BookingTicket(sc);
-                    book.bookingTicket(data);
+                    book.bookingTicket();
                     break;
                 case 3 :
                     CancelTicket cancel = new CancelTicket(sc);
-                    cancel.cancelTicket(data);
+                    cancel.cancelTicket();
                     break;
                 case 4 :
                     AvailableSeats seats = new AvailableSeats(sc);
-                    seats.availableSeats(data);
+                    seats.availableSeats();
                     break;
                 case 5 :
-                    CustomersPerShow customers = new CustomersPerShow(sc);
-                    customers.customersPerShow(data);
+                    CustomersPerShow customers = new CustomersPerShow();
+                    customers.customersPerShow();
                     break;
                 case 6 :
                     SearchCustomer search = new SearchCustomer(sc);
-                    search.searchCustomer(data);
+                    search.searchCustomer();
                     break;
                 case 7 :
-                    WeaklySalesReport report = new WeaklySalesReport(sc);
-                    report.weaklySalesReport(data);
+                    WeeklySalesReport report = new WeeklySalesReport();
+                    report.weeklySalesReport();
                     break;
                 case 8 :
                     return;

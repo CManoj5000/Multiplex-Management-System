@@ -1,9 +1,7 @@
 import java.util.Scanner;
 public class Menu {
-    CineData data;
     Scanner sc;
     Menu() {
-        data = new CineData();
         sc = new Scanner(System.in);
     }
     public void menu() {

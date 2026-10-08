@@ -30,7 +30,7 @@ public class CustomersPerShow {
                 }
             }
             for(int j = 0; j < shows.length; j++) {
-                    System.out.println("Show Time: " + shows[j] + " | Customer Count: " + customers[j].length);
+                    System.out.printf("Show Time: %-12s| Customer Count: %d%n", shows[j], customers[j].length);
                 }
                 int maxy = Integer.MIN_VALUE;
                 int miny = Integer.MAX_VALUE;
